@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use ghand in your research, please cite it as below."
+title: "ghand: Python SDK, teleoperation, and simulation tooling for the LEAP V1 KAIZEN robot hand"
+type: software
+authors:
+  - name: "Algomatic Dynamics"
+repository-code: "https://github.com/algomatic-dynamics/ghand"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-10-03"

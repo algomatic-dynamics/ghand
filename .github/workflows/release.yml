@@ -1,0 +1,80 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          # Release builds start clean instead of restoring another run's cache.
+          enable-cache: false
+          python-version: "3.12"
+
+      - name: Check that the tag matches the package versions
+        run: |
+          set -x
+          version="${GITHUB_REF_NAME#v}"
+          test "$(uv version --short)" = "$version"
+          test "$(uv version --short --package lerobot_robot_ghand)" = "$version"
+
+      - name: Build
+        run: uv build --all-packages
+
+      - name: Smoke test the wheel
+        # Runs the CLI from a clean environment that has only the base
+        # dependencies; the output also shows that __version__ matches the tag.
+        run: |
+          set -x
+          test "$(uvx --from dist/ghand-*.whl ghand --version)" = "ghand ${GITHUB_REF_NAME#v}"
+
+      - name: Upload distributions
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [ghand, lerobot_robot_ghand]
+    # Each PyPI project trusts its own environment: PyPI rejects two pending
+    # trusted publishers that share a repository, workflow, and environment.
+    environment: pypi-${{ matrix.package }}
+    permissions:
+      id-token: write
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          enable-cache: false
+
+      - name: Generate attestations
+        # Writes a .publish.attestation file next to each distribution, which
+        # uv publish then uploads together with it.
+        uses: astral-sh/attest-action@f589a42a7efb6fe400b4f400de60b4bc90390027 # v0.0.6
+        with:
+          paths: dist/${{ matrix.package }}-*
+
+      - name: Publish to PyPI
+        run: uv publish dist/${{ matrix.package }}-*

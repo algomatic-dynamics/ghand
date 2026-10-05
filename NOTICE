@@ -1,0 +1,11 @@
+ghand
+Copyright 2026 Algomatic Dynamics, Inc. (株式会社Algomatic Dynamics)
+
+This product includes software developed by Algomatic Dynamics
+(https://algomatic-dynamics.com/).
+
+The meshes of ROBOTIS components included for simulation and visualization
+(the DYNAMIXEL XC330 servo and its frame, horn, and connector parts) were
+modeled independently by Algomatic Dynamics, using ROBOTIS's published
+drawings only as a dimensional reference. They are not ROBOTIS CAD data.
+DYNAMIXEL is a trademark of ROBOTIS Co., Ltd.

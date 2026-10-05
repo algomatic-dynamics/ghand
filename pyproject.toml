@@ -1,0 +1,112 @@
+[project]
+name = "ghand"
+version = "0.1.0"
+description = "Python SDK, webcam teleoperation, and simulation tooling for the LEAP V1 KAIZEN robot hand."
+readme = "README.md"
+authors = [
+    { name = "Algomatic Dynamics" },
+]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11,<3.13"
+keywords = ["robot-hand", "dexterous-hand", "leap-hand", "dynamixel", "teleoperation", "lerobot", "mujoco"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "dynamixel-sdk>=4.0.5",
+    "numpy>=1.26",
+    "pyserial>=3.5",
+    "rich>=13",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.10",
+    "pytest>=8",
+    "ruff>=0.6",
+]
+teleop = [
+    "mediapipe>=0.10.35",
+    "opencv-python>=4.13",
+]
+viewer = [
+    "rerun-sdk>=0.32,<0.33",
+    "trimesh>=4.12",
+]
+ui = [
+    "nicegui>=3.0,<4",
+]
+lerobot = [
+    "huggingface-hub>=0.24",
+    "lerobot>=0.4",
+    "lerobot_robot_ghand",
+    "pynput>=1.7",
+]
+sim = [
+    "mujoco>=3.13,<3.14",
+    "trimesh>=4.12",
+]
+all = [
+    "huggingface-hub>=0.24",
+    "lerobot>=0.4",
+    "lerobot_robot_ghand",
+    "mediapipe>=0.10.35",
+    "mujoco>=3.13,<3.14",
+    "nicegui>=3.0,<4",
+    "opencv-python>=4.13",
+    "pynput>=1.7",
+    "rerun-sdk>=0.32,<0.33",
+    "trimesh>=4.12",
+]
+
+[tool.uv]
+override-dependencies = [
+    "rerun-sdk>=0.32,<0.33",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+lerobot_robot_ghand = { workspace = true }
+
+[dependency-groups]
+collision-assets = [
+    "coacd>=1.0.13,<1.1",
+    "manifold3d>=3.2,<4",
+]
+docs = [
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.6,<10",
+    "mkdocs-static-i18n>=1,<2",
+    "mkdocs-typer2[mkdocs]>=0.4,<1",
+    "mkdocstrings[python]>=0.29,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/algomatic-dynamics/ghand"
+Documentation = "https://github.com/algomatic-dynamics/ghand/tree/main/docs/en"
+Repository = "https://github.com/algomatic-dynamics/ghand"
+Issues = "https://github.com/algomatic-dynamics/ghand/issues"
+Changelog = "https://github.com/algomatic-dynamics/ghand/blob/main/CHANGELOG.md"
+
+[project.scripts]
+ghand = "ghand.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+# Pin the rule set so a ruff upgrade does not change what CI enforces.
+select = ["E4", "E7", "E9", "F"]
+
+[build-system]
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"

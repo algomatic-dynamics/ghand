@@ -1,0 +1,122 @@
+site_name: ghand
+site_description: Documentation for the ghand robot-hand control toolkit.
+repo_name: algomatic-dynamics/ghand
+repo_url: https://github.com/algomatic-dynamics/ghand
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
+          nav_translations:
+            Home: ホーム
+            Getting started: はじめに
+            Installation: インストール
+            Hardware setup: ハードウェア設定
+            Quickstart: クイックスタート
+            Guides: ガイド
+            Web UI: Web UI
+            Teleoperation: テレオペレーション
+            Calibration and diagnostics: キャリブレーションと診断
+            Data and learning: データと学習
+            LeRobot datasets: LeRobotデータセット
+            Training: 学習
+            Policy rollout: ポリシーロールアウト
+            Simulation: シミュレーション
+            MuJoCo: MuJoCo
+            Concepts: コンセプト
+            Architecture: アーキテクチャ
+            Reference: リファレンス
+            CLI: CLI
+            Configuration: 設定
+            Python API: Python API
+            Control and hardware: 制御とハードウェア
+            Teleop and retargeting: テレオペレーションとリターゲティング
+            Data: データ
+            Troubleshooting: トラブルシューティング
+            Development: 開発
+            Writing documentation: ドキュメントの編集
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - src
+          options:
+            docstring_section_style: list
+            heading_level: 2
+            members_order: source
+            show_if_no_docstring: false
+            show_root_heading: true
+            show_source: false
+  - mkdocs-typer2:
+      engine: native
+      pretty: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+strict: true
+validation:
+  omitted_files: warn
+  absolute_links: relative_to_docs
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Hardware setup: getting-started/hardware-setup.md
+      - Quickstart: getting-started/quickstart.md
+  - Guides:
+      - Web UI: guides/web-ui.md
+      - Teleoperation: guides/teleoperation.md
+      - Calibration and diagnostics: guides/calibration-and-diagnostics.md
+      - Coming from LEAP Hand: guides/coming-from-leap-hand.md
+  - Data and learning:
+      - LeRobot datasets: data-and-learning/lerobot-dataset.md
+      - Training: data-and-learning/training.md
+      - Policy rollout: data-and-learning/policy-rollout.md
+  - Simulation:
+      - MuJoCo: simulation/mujoco.md
+  - Concepts:
+      - Architecture: concepts/architecture.md
+  - Reference:
+      - CLI: reference/cli.md
+      - Configuration: reference/configuration.md
+      - Python API:
+          - Control and hardware: reference/python-api/control-and-hardware.md
+          - Teleop and retargeting: reference/python-api/teleop-and-retargeting.md
+          - Data: reference/python-api/data.md
+          - Simulation: reference/python-api/simulation.md
+  - Troubleshooting: troubleshooting.md
+  - Development:
+      - Writing documentation: development/documentation.md

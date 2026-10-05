@@ -1,0 +1,658 @@
+{
+  "asset_version": "v1",
+  "generator": {
+    "coacd_version": "1.0.14",
+    "manifold3d_version": "3.5.2",
+    "settings": {
+      "mcts_iterations": 60,
+      "mcts_max_depth": 3,
+      "mcts_nodes": 10,
+      "part_budget_by_source": {
+        "cover_mcp_side_right.ply": 2,
+        "fpx330_h101.ply": 3,
+        "fpx330_s101.ply": 3,
+        "fpx330_s102.ply": 3,
+        "palm_lower_right.ply": 12
+      },
+      "preprocess_mode": "off",
+      "real_metric": true,
+      "resolution": 1000,
+      "seed": 0,
+      "threshold_m": 0.003
+    },
+    "trimesh_version": "4.12.2"
+  },
+  "schema_version": "ghand-mujoco-convex-collision-assets-v1",
+  "source_urdf": {
+    "file": "assets/models/urdf/ghand_right.urdf",
+    "sha256": "bf41da5d7b4a0e61e97e77025b51e5c83d178832322c91a5ce035a4cd8fa6a00"
+  },
+  "sources": [
+    {
+      "decomposed_union_volume_ratio": 1.3517681788669866,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 344,
+          "file": "meshes/b0d4q93vl6_part_000.obj",
+          "sha256": "1555823d9708fca0f9259ab0693e58a63fd4812ac4b8245c5b5665e1dc3ef101",
+          "vertex_count": 174,
+          "volume_m3": 7.801672673189686e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.3517681788669862,
+      "source_face_count": 1890,
+      "source_file": "B0D4Q93VL6.ply",
+      "source_sha256": "baf992072a2b2123e1e0b2ddc8fd804c943e5b5399d4130776f40c80432a0d4b",
+      "source_vertex_count": 937,
+      "source_volume_m3": 5.771457535997362e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.0753990218736837,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 60,
+          "file": "meshes/xc330_t288_t_part_000.obj",
+          "sha256": "a23b48d4e352dd576180a9b2f6a8b8ffb1aeffa6968b52cd7cafd256977eb5ae",
+          "vertex_count": 32,
+          "volume_m3": 1.5589791152313664e-05
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.0753990219176202,
+      "source_face_count": 23760,
+      "source_file": "XC330_T288_T.ply",
+      "source_sha256": "c1362f6f8694e624224f7c7beb415c3b4043cd23cbdaf472d2dafc59077dfdd6",
+      "source_vertex_count": 11868,
+      "source_volume_m3": 1.4496750319294051e-05
+    },
+    {
+      "decomposed_union_volume_ratio": 2.4719281000642614,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 32,
+          "file": "meshes/_3p_jst_ext_part_000.obj",
+          "sha256": "974cc8e1aabe7cb64dbf0e3ab40cdc844cdb4ad9442f9d65105ac03ba40a77b7",
+          "vertex_count": 18,
+          "volume_m3": 2.596322474801995e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 2.4719281000642606,
+      "source_face_count": 5152,
+      "source_file": "_3P_JST_EXT.ply",
+      "source_sha256": "6d89ddc8bbb34da68bda8e0960436b1180ad9b1e3d7a7b8dfc007f967b8e4b07",
+      "source_vertex_count": 2574,
+      "source_volume_m3": 1.0503228131384179e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.323195235155924,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 444,
+          "file": "meshes/cable_cover_dip_right_part_000.obj",
+          "sha256": "044e61b4da3340174af138ebfd71fa69adc4a18270565bb3e5cf2fe0a69abbeb",
+          "vertex_count": 224,
+          "volume_m3": 2.5092629194931914e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.323195236679468,
+      "source_face_count": 1950,
+      "source_file": "cable_cover_dip_right.ply",
+      "source_sha256": "b23e230aadf921c738335961ce626efbb88c8500f1617c40c2d58af8d4f03d4c",
+      "source_vertex_count": 973,
+      "source_volume_m3": 1.8963663546856085e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.4269661034694983,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 450,
+          "file": "meshes/cable_cover_mcp_part_000.obj",
+          "sha256": "180f44d5b310857e7eeed5f9c6c9a87a9f44c86e93e1fd5bc79934bb2b6125ca",
+          "vertex_count": 227,
+          "volume_m3": 1.86285177024134e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.4269661046438253,
+      "source_face_count": 1724,
+      "source_file": "cable_cover_mcp.ply",
+      "source_sha256": "9f28dcb8197332070d3620e3fe58f29f381a97a47f1d483cb0c00eb75c8ac675",
+      "source_vertex_count": 860,
+      "source_volume_m3": 1.305463233383243e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.9028078798730923,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 480,
+          "file": "meshes/cable_cover_thumb_mcp_side_part_000.obj",
+          "sha256": "581d5ffe5a451f62fc199be03ccb1e377ed35b6e950de7584d15fd825e5449ef",
+          "vertex_count": 242,
+          "volume_m3": 8.856910815065608e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.9028078842104124,
+      "source_face_count": 3292,
+      "source_file": "cable_cover_thumb_mcp_side.ply",
+      "source_sha256": "8298991c9f2c6016fda9614c33d28ef958fc983da37d411cbe0258b41fd0f63b",
+      "source_vertex_count": 1644,
+      "source_volume_m3": 4.654653216478693e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.7615044226136893,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 412,
+          "file": "meshes/cable_guide_thumb_dip_part_000.obj",
+          "sha256": "5b06f0c6b273c246be88cb49d67b3d31a7ebf3286613ebadf31efa458d3d1106",
+          "vertex_count": 208,
+          "volume_m3": 3.4615349860943805e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.7615044238981759,
+      "source_face_count": 1990,
+      "source_file": "cable_guide_thumb_dip.ply",
+      "source_sha256": "884668de26624ff637e70bbe7a21c8e4e5287046af23cf1013b0edf88571fc14",
+      "source_vertex_count": 993,
+      "source_volume_m3": 1.965101500062398e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.3973119709292514,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 516,
+          "file": "meshes/cable_guide_thumb_pip_part_000.obj",
+          "sha256": "6d7a79dc47fddabca1a3eebd0b14c2083fe99a9d834366216efd7994954bae6c",
+          "vertex_count": 260,
+          "volume_m3": 1.397287689889339e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.3973119722262903,
+      "source_face_count": 1782,
+      "source_file": "cable_guide_thumb_pip.ply",
+      "source_sha256": "e442b85138f5e0bbb3acf1b946912e0ab5f399460d6cc0a9018b1158970f7086",
+      "source_vertex_count": 889,
+      "source_volume_m3": 9.999826222735686e-07
+    },
+    {
+      "decomposed_union_volume_ratio": 1.2549705024531363,
+      "method": "coacd",
+      "part_budget": 2,
+      "parts": [
+        {
+          "face_count": 158,
+          "file": "meshes/cover_mcp_side_right_part_000.obj",
+          "sha256": "7e820e5b13d4653a5f287ccd17254edb049409769c293e90628366f21212b8ab",
+          "vertex_count": 81,
+          "volume_m3": 1.442388349304399e-06
+        },
+        {
+          "face_count": 152,
+          "file": "meshes/cover_mcp_side_right_part_001.obj",
+          "sha256": "39265c1863b03d8b88b5faefc1836181e752173b8c633c47ed14d66a00dde4c1",
+          "vertex_count": 78,
+          "volume_m3": 2.33091051295183e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 2.885148600530516,
+      "source_face_count": 1592,
+      "source_file": "cover_mcp_side_right.ply",
+      "source_sha256": "cfd7d0d5cf39b71c857956a4c5e2941ff4cb3b386e893f8326a9cd2ec5e33150",
+      "source_vertex_count": 794,
+      "source_volume_m3": 3.006683336060954e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.3099065667198548,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 368,
+          "file": "meshes/dip_spacer_part_000.obj",
+          "sha256": "fa605c11b82d308a820c3d4f2b745cbe4b0bfc924c8ffc6cde3da81db1829db3",
+          "vertex_count": 186,
+          "volume_m3": 5.646671368633951e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.3099065667175986,
+      "source_face_count": 4820,
+      "source_file": "dip_spacer.ply",
+      "source_sha256": "59efd9f2c794fb8469e00a437dea354c36a27d8ddeca2503e0a21041bed2ecbc",
+      "source_vertex_count": 2396,
+      "source_volume_m3": 4.310743617067454e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 2.043964131666733,
+      "method": "coacd",
+      "part_budget": 3,
+      "parts": [
+        {
+          "face_count": 294,
+          "file": "meshes/fpx330_h101_part_000.obj",
+          "sha256": "184aa934f55e5f92be57b71bc80adaca0fa169e7a2ade6e2ffd9edc7a839d8d8",
+          "vertex_count": 149,
+          "volume_m3": 1.568653749146761e-06
+        },
+        {
+          "face_count": 28,
+          "file": "meshes/fpx330_h101_part_001.obj",
+          "sha256": "76df298cab5be7bd9a239d765a5c3db6bdf1e8a82e8e348dd1a394de8d0607b3",
+          "vertex_count": 16,
+          "volume_m3": 1.5313825630633742e-06
+        },
+        {
+          "face_count": 328,
+          "file": "meshes/fpx330_h101_part_002.obj",
+          "sha256": "c11f5b34aeed32f88608bceb7217156a492e58bd7c7657e59e8bb30598d32b15",
+          "vertex_count": 166,
+          "volume_m3": 2.0646141754736053e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 5.7665688012033485,
+      "source_face_count": 25746,
+      "source_file": "fpx330_h101.ply",
+      "source_sha256": "84bf77e59c9df0ecb5d340f6787d83e082dc4182b9a105f511eb7f468f8033c4",
+      "source_vertex_count": 12797,
+      "source_volume_m3": 2.5267813710924274e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 2.601683725581951,
+      "method": "coacd",
+      "part_budget": 3,
+      "parts": [
+        {
+          "face_count": 218,
+          "file": "meshes/fpx330_s101_part_000.obj",
+          "sha256": "f58feaaced8017cfa3284a715ae3db5e82125c615d3c77f67431aab11b78f3a1",
+          "vertex_count": 111,
+          "volume_m3": 5.34420209011558e-07
+        },
+        {
+          "face_count": 224,
+          "file": "meshes/fpx330_s101_part_001.obj",
+          "sha256": "4bb218637bab3587b52ad8fedd93d29284082e4ffa15f8d985fcc4b8e3389f9f",
+          "vertex_count": 114,
+          "volume_m3": 2.510510949077978e-06
+        },
+        {
+          "face_count": 190,
+          "file": "meshes/fpx330_s101_part_002.obj",
+          "sha256": "a8088a40ee9f3c38eb05960c07a5ed36d87735ab8c3513759b3d4aa05fb56b2d",
+          "vertex_count": 97,
+          "volume_m3": 1.5043897069484695e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 3.751139588507222,
+      "source_face_count": 16154,
+      "source_file": "fpx330_s101.ply",
+      "source_sha256": "e5a9705f5be17a5e775ad3a094ff8de8bbcbab8d88020cd5ca24b520be5640c7",
+      "source_vertex_count": 8019,
+      "source_volume_m3": 1.7485831671355159e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 2.27667228907035,
+      "method": "coacd",
+      "part_budget": 3,
+      "parts": [
+        {
+          "face_count": 242,
+          "file": "meshes/fpx330_s102_part_000.obj",
+          "sha256": "635faa87d6acb110d2107de7b59594660db80e9fe49e6744ecfe921622fb992e",
+          "vertex_count": 123,
+          "volume_m3": 6.26424717747918e-07
+        },
+        {
+          "face_count": 262,
+          "file": "meshes/fpx330_s102_part_001.obj",
+          "sha256": "38f4f6d6677b859f9b9abfeaee7982358248b87c941019071b1cec8e5e028a3d",
+          "vertex_count": 133,
+          "volume_m3": 1.4996579890547043e-06
+        },
+        {
+          "face_count": 236,
+          "file": "meshes/fpx330_s102_part_002.obj",
+          "sha256": "02927c0d713bfa9c0933a6366d236e34960b7fd4130fbe83ded873ed822715f0",
+          "vertex_count": 120,
+          "volume_m3": 6.264037419309417e-07
+        }
+      ],
+      "source_convex_hull_volume_ratio": 3.2207909729855273,
+      "source_face_count": 11580,
+      "source_file": "fpx330_s102.ply",
+      "source_sha256": "d73644851d0c9ae64814866454a0b76102f07c79781e30befdb0d756781f3465",
+      "source_vertex_count": 5750,
+      "source_volume_m3": 1.2089651878172083e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.5230878349393453,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 586,
+          "file": "meshes/hnx330_i101_part_000.obj",
+          "sha256": "0190294276f919165e4acb034cd4e63bde7f5580ec5516c42469b26f7109e12a",
+          "vertex_count": 295,
+          "volume_m3": 7.063685427753753e-07
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.5230878347981869,
+      "source_face_count": 4356,
+      "source_file": "hnx330_i101.ply",
+      "source_sha256": "662881a1a197e596da6b23bfbad1b6188c35442f92f1a12cc7419196335dfc00",
+      "source_vertex_count": 2170,
+      "source_volume_m3": 4.6377399708809934e-07
+    },
+    {
+      "decomposed_union_volume_ratio": 1.4888386987943618,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 1232,
+          "file": "meshes/hnx330_n102_part_000.obj",
+          "sha256": "1d28d5ebde8769cc3e194ca6e16373a9ce5ea76054072a88121af6b71e0dff8e",
+          "vertex_count": 618,
+          "volume_m3": 8.577607844167318e-07
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.4888387005887609,
+      "source_face_count": 6284,
+      "source_file": "hnx330_n102.ply",
+      "source_sha256": "c13cd630def8e41a920bd9cd5bf6492aa9cadbedec6ae9e4d783bef1bbfdf819",
+      "source_vertex_count": 3134,
+      "source_volume_m3": 5.761274053903155e-07
+    },
+    {
+      "decomposed_union_volume_ratio": 1.5244932566025002,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 260,
+          "file": "meshes/horn_thrust_mcp_side_part_000.obj",
+          "sha256": "e95832361ecc90b3076c57ac4dec48f3c06401d75014b22457b56e82858ff1aa",
+          "vertex_count": 132,
+          "volume_m3": 1.7579683747129813e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.5244932566025,
+      "source_face_count": 1116,
+      "source_file": "horn_thrust_mcp_side.ply",
+      "source_sha256": "8e3620590844f2dbd14d94ebccab61242305909458938e997bbd5483b53e27b4",
+      "source_vertex_count": 556,
+      "source_volume_m3": 1.1531493338514245e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.5997503355954923,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 260,
+          "file": "meshes/horn_thrust_thumb_mcp_forward_part_000.obj",
+          "sha256": "847f0876d542872498d0ba4e09d51e5ffd0a02c1ab179e98d4d2d4675f6e8032",
+          "vertex_count": 132,
+          "volume_m3": 1.802382013779696e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.599750335595492,
+      "source_face_count": 1104,
+      "source_file": "horn_thrust_thumb_mcp_Forward.ply",
+      "source_sha256": "30629b2a2556f860ece3da0641526c781eaaff2a69c65bf1cd3ddb1201d33cc2",
+      "source_vertex_count": 548,
+      "source_volume_m3": 1.1266645680418322e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 2.1378162158335208,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 180,
+          "file": "meshes/horn_thrust_thumb_mcp_part_000.obj",
+          "sha256": "3aba6bb0f61e1fff5085f658d7c962431284785ffe0772d9cdd002cc068eda37",
+          "vertex_count": 92,
+          "volume_m3": 1.7198282817051077e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 2.137816216500143,
+      "source_face_count": 1004,
+      "source_file": "horn_thrust_thumb_mcp.ply",
+      "source_sha256": "5343b1f2435f55a1cddd1accd91a704aac3a95dde77a819ea13369caf95e03c2",
+      "source_vertex_count": 500,
+      "source_volume_m3": 8.044790186962152e-07
+    },
+    {
+      "decomposed_union_volume_ratio": 1.5741928929454214,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 372,
+          "file": "meshes/mcp_bracket_part_000.obj",
+          "sha256": "60b9fe4d70f4fa7fe4f378ee6f62e883e4f6418a4374e8fa99b3190b3fe414df",
+          "vertex_count": 188,
+          "volume_m3": 1.1348681940826142e-05
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.5741928946857446,
+      "source_face_count": 10614,
+      "source_file": "mcp_bracket.ply",
+      "source_sha256": "78a4d35da01c88e07139d7268d1ab6c3fb1e14bbbbe7de3ecb7a2de9ee84c6e0",
+      "source_vertex_count": 5307,
+      "source_volume_m3": 7.20920670297e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.2131352997360008,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 380,
+          "file": "meshes/palm_cable_holder_part_000.obj",
+          "sha256": "b608b5446c694738240e88c559a66e45f77d17d946978cae610016d1b1c14fac",
+          "vertex_count": 192,
+          "volume_m3": 3.398675624662751e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.213135299736001,
+      "source_face_count": 5444,
+      "source_file": "palm_cable_holder.ply",
+      "source_sha256": "d0e2d1920e6e534599ab1e665d50c732280c091b18868f5510c22c045bfe4d22",
+      "source_vertex_count": 2716,
+      "source_volume_m3": 2.8015635218099813e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.837877317261179,
+      "method": "coacd",
+      "part_budget": 12,
+      "parts": [
+        {
+          "face_count": 258,
+          "file": "meshes/palm_lower_right_part_000.obj",
+          "sha256": "22f96a49465b4e1baf6487ce10937cdbc9b9261ca3042bca70c598ce8adbc0e4",
+          "vertex_count": 131,
+          "volume_m3": 1.524050050281339e-05
+        },
+        {
+          "face_count": 206,
+          "file": "meshes/palm_lower_right_part_001.obj",
+          "sha256": "f773c7b5c8164b3fb7d271d45f499610bd08fc32cb6298fa6391b17b25b4d8e7",
+          "vertex_count": 105,
+          "volume_m3": 9.046600422462383e-08
+        },
+        {
+          "face_count": 274,
+          "file": "meshes/palm_lower_right_part_002.obj",
+          "sha256": "2e3641b9feb2920151a36dec04fd969296496d856446f9bc1d171734ceadf480",
+          "vertex_count": 139,
+          "volume_m3": 2.7456532840274784e-05
+        },
+        {
+          "face_count": 310,
+          "file": "meshes/palm_lower_right_part_003.obj",
+          "sha256": "4dc964cf7543ed35dad12b329d9aff5a3d5da6f3ab945f20cf5c2651ce78e7ad",
+          "vertex_count": 157,
+          "volume_m3": 2.2966520493517383e-05
+        },
+        {
+          "face_count": 92,
+          "file": "meshes/palm_lower_right_part_004.obj",
+          "sha256": "0cae509341e713abebcec54484024c9663928a57781aface88f81018ab632ce1",
+          "vertex_count": 48,
+          "volume_m3": 6.54117481960514e-06
+        },
+        {
+          "face_count": 230,
+          "file": "meshes/palm_lower_right_part_005.obj",
+          "sha256": "6473d17a48152a6cc117ad6a483470e2ab6d4b7edabc63f6563419022032e8b9",
+          "vertex_count": 117,
+          "volume_m3": 1.701840816552149e-05
+        },
+        {
+          "face_count": 150,
+          "file": "meshes/palm_lower_right_part_006.obj",
+          "sha256": "ba871bb6f480b9a463f4b4c20f6f2beab581d8e1309862af437e48cfc863f9c2",
+          "vertex_count": 77,
+          "volume_m3": 1.3713542418104482e-05
+        },
+        {
+          "face_count": 130,
+          "file": "meshes/palm_lower_right_part_007.obj",
+          "sha256": "9fdd8305071ce9592f58c484b90bee9b9caf7be0ed84c1c292238eac0ceed5dd",
+          "vertex_count": 67,
+          "volume_m3": 2.2423748450850602e-07
+        },
+        {
+          "face_count": 150,
+          "file": "meshes/palm_lower_right_part_008.obj",
+          "sha256": "f5b43e2e8ec5d9cf8f9bd79c58ff56ed776f2c78076b3ffc3f999168781991ea",
+          "vertex_count": 77,
+          "volume_m3": 1.135425978124319e-05
+        },
+        {
+          "face_count": 114,
+          "file": "meshes/palm_lower_right_part_009.obj",
+          "sha256": "ef5b34c9cc5258694b154062a6bccd223930bdd7e62c7c7605fd7bcbdecab880",
+          "vertex_count": 59,
+          "volume_m3": 2.2377469448611677e-05
+        },
+        {
+          "face_count": 48,
+          "file": "meshes/palm_lower_right_part_010.obj",
+          "sha256": "133bfc416f23874ff90e267601bd7a9c8ccba1bb5d2b60107bfb88241ffed349",
+          "vertex_count": 26,
+          "volume_m3": 2.3134695222107435e-08
+        },
+        {
+          "face_count": 34,
+          "file": "meshes/palm_lower_right_part_011.obj",
+          "sha256": "34e43afcb09090f0d59f6b7ca0d93200e7becb84409279d3911da0d8758d65a2",
+          "vertex_count": 19,
+          "volume_m3": 2.2838408242362624e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 4.905583476824991,
+      "source_face_count": 25336,
+      "source_file": "palm_lower_right.ply",
+      "source_sha256": "fd20085da53a4cb4d887a033b0b6586fc4d2c389c3ad1909c037cf697d253ff9",
+      "source_vertex_count": 12582,
+      "source_volume_m3": 7.081977943314086e-05
+    },
+    {
+      "decomposed_union_volume_ratio": 1.4462748074277545,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 438,
+          "file": "meshes/palm_upper_right_part_000.obj",
+          "sha256": "782ee13d3189153e26034b94a11fb69c736e6dd9e64e374264a717cfaf7e535c",
+          "vertex_count": 221,
+          "volume_m3": 4.148127388105846e-05
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.446274808801591,
+      "source_face_count": 11574,
+      "source_file": "palm_upper_right.ply",
+      "source_sha256": "05660b30dd0c2eaf7c4f323ba9415634d1f17c09ac26bb2605f90a3aad8e23e0",
+      "source_vertex_count": 5747,
+      "source_volume_m3": 2.8681460368126997e-05
+    },
+    {
+      "decomposed_union_volume_ratio": 1.3610608853544914,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 368,
+          "file": "meshes/thumb_spacer_part_000.obj",
+          "sha256": "6ec75814a4cf307c2f8a3f03e65c964807b7263363327fd4255602feb0f802fd",
+          "vertex_count": 186,
+          "volume_m3": 1.4876160935030838e-06
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.3610608853643358,
+      "source_face_count": 6634,
+      "source_file": "thumb_spacer.ply",
+      "source_sha256": "d34a3108aacb1bf84863079caaf3e91e0d10b64160204e181901671a58416755",
+      "source_vertex_count": 3295,
+      "source_volume_m3": 1.0929827686619344e-06
+    },
+    {
+      "decomposed_union_volume_ratio": 1.1292015821693495,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 4612,
+          "file": "meshes/tip_soft__thumb_part_000.obj",
+          "sha256": "3d8faf7d9bac3e18feddc05dab5b0165a90d1766f9745ec6a0ba12cdb630b19b",
+          "vertex_count": 2308,
+          "volume_m3": 1.6184062062374235e-05
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.1292015832068167,
+      "source_face_count": 12322,
+      "source_file": "tip_soft__thumb.ply",
+      "source_sha256": "384decfc53829cf63399789824f043b32f55b73b77ef4d0febf09e7019238b94",
+      "source_vertex_count": 6163,
+      "source_volume_m3": 1.4332305540308824e-05
+    },
+    {
+      "decomposed_union_volume_ratio": 1.129486037727267,
+      "method": "convex_hull",
+      "part_budget": 1,
+      "parts": [
+        {
+          "face_count": 4626,
+          "file": "meshes/tip_soft_part_000.obj",
+          "sha256": "e0ad09cdacb9d7d804fe622fd6e446f9212a82f51d9aa4d78c2ec7b57e3d2147",
+          "vertex_count": 2315,
+          "volume_m3": 1.5042126635796815e-05
+        }
+      ],
+      "source_convex_hull_volume_ratio": 1.129486038668411,
+      "source_face_count": 10264,
+      "source_file": "tip_soft.ply",
+      "source_sha256": "e66d422b9db2fbb3cee1b1b2aeda3000119a55ae0ff07e0662009a3d74cfa350",
+      "source_vertex_count": 5134,
+      "source_volume_m3": 1.331767382936158e-05
+    }
+  ]
+}
