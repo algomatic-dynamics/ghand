@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/ecf324b7-3178-4d55-9744-c4e36d94e451
 </td>
 <td>
 
-https://github.com/user-attachments/assets/88e3a341-87d5-4e12-80e6-18a117da4da2
+https://github.com/user-attachments/assets/884dd9a6-139a-439b-8e37-bf125e5bb8de
 
 </td>
 </tr>

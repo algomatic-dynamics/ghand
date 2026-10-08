@@ -1,5 +1,6 @@
 site_name: ghand
 site_description: Documentation for the ghand robot-hand control toolkit.
+site_url: https://algomatic-dynamics.github.io/ghand/
 repo_name: algomatic-dynamics/ghand
 repo_url: https://github.com/algomatic-dynamics/ghand
 
